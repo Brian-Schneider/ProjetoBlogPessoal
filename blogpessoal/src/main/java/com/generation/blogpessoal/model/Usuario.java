@@ -11,6 +11,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -23,10 +24,10 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotBlank(message = "O atributo Nome é OBRIGATÓRIO!")
+	@NotNull(message = "O atributo Nome é OBRIGATÓRIO!")
 	private String nome;
 	
-	@NotBlank(message = "O atributo Usuário é OBRIGATÓRIO!")
+	@NotNull(message = "O atributo Usuário é OBRIGATÓRIO!")
 	@Email(message = "O atributo Usuário deve ser um email válido!")
 	private String usuario;
 	

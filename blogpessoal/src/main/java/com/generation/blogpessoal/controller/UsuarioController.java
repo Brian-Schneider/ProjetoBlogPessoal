@@ -23,7 +23,7 @@ import com.generation.blogpessoal.repository.UsuarioRepository;
 import com.generation.blogpessoal.service.UsuarioService;
 
 @RestController
-@RequestMapping("/usarios")
+@RequestMapping("/usuarios")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class UsuarioController {
 	
@@ -42,7 +42,7 @@ public class UsuarioController {
 	public ResponseEntity<Usuario> getById(@PathVariable Long id) {
 		return usuarioRepository .findById(id)
 				.map(resposta -> ResponseEntity.ok(resposta))
-				.orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
+				.orElse(ResponseEntity.notFound().build());
 	}
 	
 	@PostMapping("/logar")
