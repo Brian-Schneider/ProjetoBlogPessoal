@@ -42,7 +42,7 @@ public class UsuarioController {
 	public ResponseEntity<Usuario> getById(@PathVariable Long id) {
 		return usuarioRepository .findById(id)
 				.map(resposta -> ResponseEntity.ok(resposta))
-				.orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
+				.orElse(ResponseEntity.notFound().build());
 	}
 	
 	@PostMapping("/logar")
