@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\User\Desktop\Projeto Blog Pessoal\ProjetoBlogPessoal\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
